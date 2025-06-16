@@ -16,7 +16,7 @@ app = FastAPI()
 # CORS setup for React dev server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","https://autolinker-aasf64pda-nikhilnagaichs-projects.vercel.app/"],
+    allow_origins=["http://localhost:3000","https://autolinker-aasf64pda-nikhilnagaichs-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

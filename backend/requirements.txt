@@ -1,0 +1,20 @@
+fastapi
+uvicorn[standard]
+pydantic
+requests
+beautifulsoup4
+readability-lxml
+tqdm
+openai
+numpy
+scikit-learn
+python-dotenv
+tldextract
+supabase
+psycopg2-binary
+# For logging (standard library, but included for completeness)
+# logging
+# For parsing URLs (standard library, but included for completeness)
+# urllib3
+# For ast.literal_eval (standard library)
+# ast

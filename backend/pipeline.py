@@ -11,10 +11,13 @@ def run_autolinker_pipeline(input_url):
     from urllib.parse import urlparse, urldefrag
     from db.supabase_client import get_supabase
     import ast
+    import openai
     import logging
     from bs4 import BeautifulSoup
+    from dotenv import load_dotenv
 
     logging.basicConfig(level=logging.INFO)
+    load_dotenv()
 
     def remove_hyperlinked_text(html_content):
         soup = BeautifulSoup(html_content, "html.parser")
@@ -76,8 +79,7 @@ def run_autolinker_pipeline(input_url):
 
         return True
 
-    # Set your OpenAI API key
-    os.environ["OPENAI_API_KEY"] = "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"  # Replace with your actual OpenAI API key
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     # 1. Prompt for input URL and derive seed
     pattern = get_blog_pattern(input_url)
